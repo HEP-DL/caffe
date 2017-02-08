@@ -170,3 +170,16 @@ endif()
 if(BUILD_docs)
   find_package(Doxygen)
 endif()
+
+
+# ---[ ROOT
+list(APPEND CMAKE_PREFIX_PATH $ENV{ROOTSYS})
+find_package(ROOT REQUIRED)
+include(${ROOT_USE_FILE})
+find_package(larcv REQUIRED)
+list(APPEND Caffe_LINKER_LIBS ${ROOT_LIBRARIES})
+
+
+# ---[LArCV]
+find_package(larcv Required)
+list(APPEND Caffe_LINKER_LIBS LARCV)
