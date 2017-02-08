@@ -182,4 +182,4 @@ list(APPEND Caffe_LINKER_LIBS ${ROOT_LIBRARIES})
 
 # ---[LArCV]
 find_package(larcv Required)
-list(APPEND Caffe_LINKER_LIBS LARCV)
+list(APPEND Caffe_LINKER_LIBS ${LarCVAPICaffe})
