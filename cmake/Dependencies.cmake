@@ -176,7 +176,6 @@ endif()
 list(APPEND CMAKE_PREFIX_PATH $ENV{ROOTSYS})
 find_package(ROOT REQUIRED)
 include(${ROOT_USE_FILE})
-find_package(larcv REQUIRED)
 list(APPEND Caffe_LINKER_LIBS ${ROOT_LIBRARIES})
 
 
